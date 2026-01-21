@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearCut | AI Background Remover</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <nav>
+        <div class="logo">Clear<span>Cut</span></div>
+    </nav>
+
+    <main class="container">
+        <header>
+            <h1>Remove Image <span class="gradient-text">Background</span></h1>
+            <p>Upload your photo and let our AI do the magic in seconds.</p>
+        </header>
+
+        <section class="upload-box" id="drop-zone">
+            <div class="upload-content" id="upload-content">
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                <h3>Drag & Drop or Click</h3>
+                <p>Supports JPG, PNG (Max 5MB)</p>
+                <input type="file" id="file-input" hidden accept="image/*">
+                <button class="btn-primary" onclick="document.getElementById('file-input').click()">Choose Image</button>
+            </div>
+
+            <div class="preview-container" id="preview-container" style="display: none;">
+                <div class="image-wrapper">
+                    <img id="image-preview" src="#" alt="Preview">
+                    <div id="scan-line" class="scan-line"></div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-secondary" onclick="resetUpload()">Change</button>
+                    <button class="btn-gradient" id="remove-btn">Remove Background</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="result-box" id="result-box" style="display: none;">
+            <div class="result-card">
+                <img id="result-image" src="#" alt="Result">
+                <a id="download-btn" class="btn-download" download="no-bg.png">Download PNG</a>
+            </div>
+        </section>
+    </main>
+     
+    <footer class="glass-footer">
+    <div class="footer-grid">
+        <div class="footer-section">
+            <h3>Join our Newsletter</h3>
+            <p>Get updates on new AI features.</p>
+            <form class="signup-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-gradient">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="footer-section">
+            <h3>YouTube Channel</h3>
+            <p>Watch tutorials on how to edit like a pro.</p>
+            <script src="https://apis.google.com/js/platform.js"></script>
+            <div class="g-ytsubscribe" data-channelid="RogueNado" data-layout="full" data-count="default"></div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-links">
+                <a href=" https://www.instagram.com/anima_tion012?igsh=cjFuaHVwNjloZzV4" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="rk6854797@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+            </div>
+        </div>
+    </div>
+    <link rel="icon" type="image/png" href="favicon.png"> <nav>
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-scissors logo-icon"></i> 
+            Clear<span>Cut</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="https://www.youtube.com/@RogueNado" target="_blank" class="nav-yt-btn">
+                <i class="fab fa-youtube"></i> Subscribe
+            </a>
+        </div>
+    </div>
+</nav> 
+    <div class="footer-bottom">
+        <p>&copy; 2026 ClearCut AI. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
